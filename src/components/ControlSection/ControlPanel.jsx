@@ -1,10 +1,11 @@
 import React from "react";
 import FilterButton from "./FilterButton";
 import FilterInput from "./FilterInput";
+import styles from "./ControlPanel.module.css";
 
 const ControlPanel = (props) => {
 	return (
-		<React.Fragment>
+		<div className={styles.panel}>
 			<FilterInput
 				id="input_filter"
 				searchCoffee={(inputValue) => props.inputHandler(inputValue)}
@@ -14,17 +15,9 @@ const ControlPanel = (props) => {
 				name="All Coffees"
 				buttonHandler={props.buttonHandler}
 			/>
-			<FilterButton
-				id="hot"
-				name="Hot Coffees"
-				buttonHandler={props.buttonHandler}
-			/>
-			<FilterButton
-				id="iced"
-				name="Iced Coffees"
-				buttonHandler={props.buttonHandler}
-			/>
-		</React.Fragment>
+			<FilterButton id="hot" name="Hot" buttonHandler={props.buttonHandler} />
+			<FilterButton id="iced" name="Iced" buttonHandler={props.buttonHandler} />
+		</div>
 	);
 };
 

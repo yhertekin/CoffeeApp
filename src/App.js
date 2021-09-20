@@ -1,7 +1,8 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import CoffeeList from "./components/Coffees/CoffeeList";
 import ControlPanel from "./components/ControlSection/ControlPanel";
 import db from "./db/coffees.json";
+import styles from "./App.module.css";
 
 function App() {
 	const [dbData, setDbData] = useState(db);
@@ -30,7 +31,7 @@ function App() {
 	};
 
 	return (
-		<div className="App">
+		<div className={styles.app}>
 			<ControlPanel
 				buttonHandler={buttonHandler}
 				inputHandler={(inputValue) => inputHandler(inputValue)}

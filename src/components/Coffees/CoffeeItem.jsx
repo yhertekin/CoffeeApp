@@ -3,7 +3,7 @@ import React from "react";
 const CoffeeItem = (props) => {
 	return (
 		<li>
-			<h1>{props.title}</h1>
+			<h2>{props.title}</h2>
 			<p>{props.description}</p>
 			<div>Ingredients: {props.ingredients.join(", ")}</div>
 		</li>

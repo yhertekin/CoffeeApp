@@ -1,0 +1,13 @@
+.list {
+	list-style: none;
+}
+
+.list h2 {
+	font-family: roboto;
+	font-weight: bolder;
+}
+
+.list p,
+div {
+	font-family: exo;
+}

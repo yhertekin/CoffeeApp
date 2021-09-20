@@ -1,0 +1,22 @@
+.app {
+	display: grid;
+	grid-template-columns: 3fr 12fr;
+}
+
+@media only screen and (max-width: 768px) {
+	/* For desktop: */
+	.app {
+		display: flex;
+		flex-direction: column;
+	}
+}
+
+@font-face {
+	font-family: exo;
+	src: url(./fonts/exo-bold.woff2);
+}
+
+@font-face {
+	font-family: roboto;
+	src: url(./fonts/roboto-regular.woff2);
+}

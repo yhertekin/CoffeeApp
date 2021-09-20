@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import styles from "./FilterInput.module.css";
 
 const FilterInput = (props) => {
 	const [inputValue, setInputValue] = useState("");
@@ -17,6 +18,7 @@ const FilterInput = (props) => {
 			placeholder="Search"
 			value={inputValue}
 			onChange={(e) => onChangeHandler(e)}
+			className={styles.input}
 		/>
 	);
 };

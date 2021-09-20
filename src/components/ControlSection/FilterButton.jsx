@@ -1,8 +1,13 @@
 import React from "react";
+import styles from "./FilterButton.module.css";
 
 const FilterButton = (props) => {
 	return (
-		<button id={props.id} onClick={props.buttonHandler}>
+		<button
+			className={styles.button}
+			id={props.id}
+			onClick={props.buttonHandler}
+		>
 			{props.name}
 		</button>
 	);
