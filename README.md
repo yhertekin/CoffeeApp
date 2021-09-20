@@ -1,6 +1,6 @@
 # Coffee App
 
-This project was given by Kloai's bootcamp as a final case problem.
+This project was given by Kloia's bootcamp as a final case problem.
 
 ## You can
 
