@@ -5,7 +5,10 @@ import FilterInput from "./FilterInput";
 const ControlPanel = (props) => {
 	return (
 		<React.Fragment>
-			<FilterInput id="input_filter" searchCoffee={props.inputHandler} />
+			<FilterInput
+				id="input_filter"
+				searchCoffee={(inputValue) => props.inputHandler(inputValue)}
+			/>
 			<FilterButton
 				id="all"
 				name="All Coffees"

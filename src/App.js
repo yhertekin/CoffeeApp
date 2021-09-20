@@ -1,25 +1,41 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import CoffeeList from "./components/Coffees/CoffeeList";
 import ControlPanel from "./components/ControlSection/ControlPanel";
 import db from "./db/coffees.json";
 
 function App() {
+	const [dbData, setDbData] = useState(db);
 	const [coffeeData, setCoffeeData] = useState(db);
+	const [category, setCategory] = useState("all");
 
 	const buttonHandler = (event) => {
-		const category = event.target.id;
-		if (category !== "all") {
-			setCoffeeData(db.filter((item) => item.category === category));
-		} else {
-			setCoffeeData(db);
-		}
+		const buttonCategory = event.target.id;
+		setDbData(
+			buttonCategory === "all"
+				? coffeeData
+				: coffeeData.filter((item) => item.category === buttonCategory)
+		);
+		setCategory(buttonCategory);
 	};
-	const inputHandler = (event) => {};
+
+	const inputHandler = (inputValue) => {
+		inputValue = inputValue.toLowerCase();
+		let data = coffeeData.filter(
+			(item) => item.title.toLowerCase().search(inputValue) !== -1
+		);
+		if (category !== "all") {
+			data = data.filter((item) => item.category === category);
+		}
+		setDbData(data);
+	};
 
 	return (
 		<div className="App">
-			<ControlPanel buttonHandler={buttonHandler} inputHandler={inputHandler} />
-			<CoffeeList coffees={coffeeData} />
+			<ControlPanel
+				buttonHandler={buttonHandler}
+				inputHandler={(inputValue) => inputHandler(inputValue)}
+			/>
+			<CoffeeList coffees={dbData} />
 		</div>
 	);
 }
