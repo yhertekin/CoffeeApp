@@ -2,8 +2,6 @@
 
 This project was given by Kloia's bootcamp as a final case problem.
 
-## You can
-
 - view coffees available within the system.
 - view coffee categories available within the system. (hot|iced)
 - filter coffees with a free-form text input.
