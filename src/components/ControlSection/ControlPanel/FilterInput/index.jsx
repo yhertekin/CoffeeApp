@@ -1,15 +1,13 @@
-import React, { useEffect, useState } from "react";
+import React, { useState, useEffect } from "react";
 import styles from "./FilterInput.module.css";
+import { useCoffee } from "../../../../context/CoffeeContext";
 
-const FilterInput = (props) => {
+const FilterInput = () => {
 	const [inputValue, setInputValue] = useState("");
-
-	const onChangeHandler = (event) => {
-		setInputValue(event.target.value);
-	};
+	const { inputHandler } = useCoffee();
 
 	useEffect(() => {
-		props.searchCoffee(inputValue);
+		inputHandler(inputValue);
 	}, [inputValue]);
 
 	return (
@@ -17,7 +15,7 @@ const FilterInput = (props) => {
 			type="text"
 			placeholder="Search"
 			value={inputValue}
-			onChange={(e) => onChangeHandler(e)}
+			onChange={(e) => setInputValue(e.target.value)}
 			className={styles.input}
 		/>
 	);

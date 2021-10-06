@@ -11,3 +11,10 @@
 div {
 	font-family: exo;
 }
+
+@media screen and (max-width: 768px) {
+	/* For mobile: */
+	.list {
+		margin-right: 9%;
+	}
+}
