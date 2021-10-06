@@ -1,6 +1,6 @@
-import React, { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 import styles from "./FilterInput.module.css";
-import { useCoffee } from "../../../../context/CoffeeContext";
+import { useCoffee } from "../../../context/CoffeeContext";
 
 const FilterInput = () => {
 	const [inputValue, setInputValue] = useState("");

@@ -1,4 +1,4 @@
-import { useCoffee } from "../../../context/CoffeeContext";
+import { useCoffee } from "../../context/CoffeeContext";
 import CoffeeItem from "./CoffeeItem";
 import styles from "./CoffeeList.module.css";
 

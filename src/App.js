@@ -1,5 +1,5 @@
-import CoffeeList from "./components/Coffees/CoffeeList";
-import ControlPanel from "./components/ControlSection/ControlPanel";
+import CoffeeList from "./components/CoffeeList";
+import ControlPanel from "./components/ControlPanel";
 import styles from "./App.module.css";
 import CoffeeProvider from "./context/CoffeeContext";
 

@@ -1,6 +1,5 @@
-import React from "react";
 import styles from "./FilterButton.module.css";
-import { useCoffee } from "../../../../context/CoffeeContext";
+import { useCoffee } from "../../../context/CoffeeContext";
 
 const FilterButton = (props) => {
 	const { buttonHandler } = useCoffee();
