@@ -11,11 +11,11 @@ This project was given by Kloai's bootcamp as a final case problem.
 
 ## Desktop
 
-![desktop image of application](./readme_pics/caffee_desktop.PNG)
+![desktop image of application](./readme_pics/coffee_desktop.PNG)
 
 ## Mobile
 
-![mobile image of application](./readme_pics/caffee_mobile.PNG)
+![mobile image of application](./readme_pics/coffee_mobile.PNG)
 
 ## To run this project
 
